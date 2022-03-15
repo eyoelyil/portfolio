@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Photo Gallery</title>
+    <style>
+      body {
+        margin: 10px;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        background-color: aliceblue;
+      }
+      .image-gallery {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 50px 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-auto-rows: 250px;
+        grid-auto-flow: dense;
+        grid-gap: 20px;
+      }
+
+      .image-gallery .image-box {
+        position: relative;
+        background-color: white;
+        overflow: hidden;
+      }
+
+      .image-gallery .image-box:nth-child(7n + 1) {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      .image-gallery .image-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.5s ease;
+      }
+
+      .image-gallery .image-box:hover img {
+        transform: scale(1.1);
+      }
+
+      @media (max-width: 768px) {
+        .image-gallery {
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          grid-auto-rows: 250px;
+        }
+        .image-gallery .image-box:nth-child(7n + 1) {
+          grid-column: unset;
+          grid-row: unset;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a class="logo-text" href="index.html">Eyuel</a>
+      </div>
+
+      <nav class="responsive">
+        <button id="mobileButton">
+          <span class="material-icons">menu</span>
+        </button>
+        <ul>
+          <li><a class="links" href="#section1">Home</a></li>
+          <li><a class="links" href="">About me</a></li>
+          <li><a class="links" href="#section3">Skill</a></li>
+          <li><a class="links" href="gallery.html">Gallery</a></li>
+          <li><a class="links" href="#section4">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="container">
+      <div class="image-gallery">
+        <div class="image-box">
+          <img src="galleryImgs/img1.jpg" alt="" />
+        </div>
+        <div class="image-box">
+          <img src="galleryImgs/img2.jpg" alt="" />
+        </div>
+        <div class="image-box">
+          <img src="galleryImgs/img3.jpg" alt="" />
+        </div>
+        <div class="image-box">
+          <img src="galleryImgs/img4.jpg" alt="" />
+        </div>
+        <div class="image-box">
+          <img src="galleryImgs/img5.jpg" alt="" />
+        </div>
+        <div class="image-box">
+          <img src="galleryImgs/img6.jpg" alt="" />
+        </div>
+        <div class="image-box">
+          <img src="galleryImgs/img7.jpg" alt="" />
+        </div>
+        <div class="image-box">
+          <img src="galleryImgs/img8.jpg" alt="" />
+        </div>
+        <div class="image-box">
+          <img src="galleryImgs/img9.jpg" alt="" />
+        </div>
+        <div class="image-box">
+          <img src="galleryImgs/img10.jpg" alt="" />
+        </div>
+        <div class="image-box">
+          <img src="galleryImgs/img11.jpg" alt="" />
+        </div>
+        <div class="image-box">
+          <img src="galleryImgs/img12.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="contact-section container" id="section4">
+      <form>
+        <h2 class="contact-title">Contact me</h2>
+        <div class="form-input">
+          <label for="firstname">First name</label>
+          <input id="firstname" type="text" name="username" />
+        </div>
+
+        <div class="form-input">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" />
+        </div>
+        <div class="form-input">
+          <label for="textarea">Send me message</label>
+          <textarea name="message" rows="5" cols="18"></textarea>
+        </div>
+
+        <div class="form-input">
+          <button>SIGN UP</button>
+        </div>
+      </form>
+    </section>
+    <footer id="contact">
+      <p class="copy-right">Copyright &copy 2022</p>
+      <button id="backToTop">
+        Top
+        <span class="material-icons"> arrow_upward </span>
+      </button>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
