@@ -151,7 +151,7 @@ nav ul li {
 
 body {
   font-family: "Roboto", Courier, monospace;
-  /* background-color: rgba(190, 215, 235, 0.558); */
+
   margin: 2% 2%;
 }
 
@@ -173,10 +173,6 @@ body {
 .container {
   padding: 5% 5%;
   margin: 4rem 2rem;
-}
-
-.project-section {
-  /* background-color: rgb(239, 234, 243); */
 }
 
 .projects {
@@ -237,13 +233,7 @@ body {
   grid-gap: 25px;
   align-items: center;
   justify-content: center;
-
   margin: 0 5px;
-
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-around; */
 }
 
 .skill-section {
